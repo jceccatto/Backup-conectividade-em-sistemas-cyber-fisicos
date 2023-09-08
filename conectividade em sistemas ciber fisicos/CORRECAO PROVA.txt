@@ -1,0 +1,50 @@
+questao 1:
+4.(V) interface de sockets. é feita pela aplicacao e alem de escolher se é ipv4 ou ipv6, escolhe se é udp ou tcp
+
+questao 2:
+tcp suporta apenas unicast, udp aceita os 3 modos
+(3)
+(2)
+(1)certa, quem decide o que e como vira pacote é tcp
+(1)
+(3)
+
+UDP nao faz nada, apenas delega a funcao.
+
+2.1:
+TCP cria uma forma de comunicacao muito rigida feita pelo SO, e varias coisas que ele faz podem nao ser adequadas para sua aplicacao. a aplicacao só percebe pacotes que chegam em ordem. TCP baixa a taxa de trasmissao por perda de pacotes, ele é muito pesado. 
+
+UDP te da liberdade para comunicacao.
+
+questao 3
+(4)
+(3) tcp trava os pacotes, entao é apenas UDP
+(3) APENAS UDP, e nao melhor udp.
+(3) TCP o problema é a criacao e troca de mensagem.
+(1) O problema é o tratamento da aplicacao
+
+---------------------------------------------------
+
+Questao 4
+(V)
+(V)
+(F)
+(V)
+4.1:
+TROCA DE CONTEXTO(TROCAR DE APLICAÇAO) É MUITO CARO, GASTA MUITO RECURSO, NO COOPERATIVO TU PODE MINIMIZAR ESSA TROCA, POREM SE VC ERRAR NA PROGRAMAÇAO TU PODE TER USO DE CPU EM 100%
+
+questao 5
+***(3) ambos pois os threads sao tratados como processos
+(2)
+(2)
+(3)
+(2)
+
+questao 6:
+(V)
+(V)
+(V)
+(V)
+6.1:
+
+

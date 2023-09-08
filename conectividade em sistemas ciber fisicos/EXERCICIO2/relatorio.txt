@@ -1,0 +1,85 @@
+https://www.ppgia.pucpr.br/~jamhour/Pessoal/Graduacao/Ciencia/Pratica/ExerciciosDNS.html
+
+Questão 1: O que significa "Não é resposta autoritativa"?
+
+Significa que o servidor DNS nao armazena localmente o nome solicitado e teve que buscar em outro servidor.
+
+Significa que a resposta veio da CACHE do servidor.
+se ele for buscar e veio da fonte original, a resposta é autoritativa, sempre que vier da cache nao é resposta autoritativa.
+
+Questão 2: Para que serve o código TTL?
+
+TTL= Time To live
+Controla o tempo maximo que um nome pode permanecer na CACHE.
+
+Questão 3: Qual a diferença entre consultas "TYPE A" e "TYPE AAAA"
+
+Type A= Endereço IPv4
+Type AAAA= Endereço IPv6
+------------------------
+backup = copia morta que só se consulta quando for restaurado.
+replicaçao = copia viva que sempre é atualizada.
+------------------------
+
+Questão 4: Para que servem os tempos retornados a consulta do SOA?
+
+Eles definem de quanto em quanto tempo os servidores secundários verificam no SOA se existe uma cópia do arquivo de ZONA mais atualizado.
+
+Questão 5: Por que a consulta do SOA retorna um registro e a consulta do NS retorna dois registros?
+
+SOA é a cópia master, onde nomes podem ser criados e endereços alterados.
+Só pode haver um.
+
+NS representa servidores que tem ua cópia da ZONA e respondem se consultados. Podem haver um número ilimitados. O mínimo é 2.
+
+Questão 6: Por que o servidor alpha.pucpr.br aparece nas respostas do SOA e NS?
+
+Porque acumula as funçoes de SOA e NS(OBS: ISSO É PERIGOSO!!!!!).
+
+Questão 7: Qual o significado da consulta MX?
+
+Mail eXchange, permite descobrir quem é o servidor de EMAIL de um certo domínio. É necessario para envio de email entre servidores diferentes.
+
+Questão 8: As três consultas referem-se ao mesmo endereço IP?
+
+Sim,só existe uma maquina com três nomes .
+
+Questão 9: Para que serve o registro do tipo CNAME?
+
+É a maneira de atribuir apelidos a um nome existente.
+
+Questão 10: Qual o tipo de registro utilizado na consulta reversa (obter o nome a partir do IP)?
+
+PTR(Regustri de Consulta Reversa)
+
+Questão 11: Por que a consulta reversa ao IP do servidor web da pucpr não retornou resultado?
+
+As consultas reversas só funcionam se um arquivo de zona reversa(contendo registros PTR) for criada.
+
+Geralmente, lea só é criada oara registrar servidores de EMAIL(Verificaçao de SPAM).
+
+Questão 12: No Brasil, o SOA responsável pelos domínios br, com.br e gov.br são os mesmos?
+
+Sim. 
+
+a.dns.br.
+
+Questão 13: No domínio internacional, o mesmo SOA é responsável pelos domínios gov, com e net?
+
+Nao, sao servidores diferentes.
+
+Questão 14: Existe um único servidor DNS que caso falhe comprometa toda a consulta de nomes no Brasil?
+
+Nao. No Brasil existem 6 servidores de a até f. Apenas o a é SOA. Os demais sao NS.
+
+Questão 15: Por que o servidor DNS retorna sempre a mesma resposta para os nomes que terminam com pucpr.br?
+
+por que o servidor a.dns.br nao aceita consultas recursivas e indica apenas quem sao os NS do dominio.
+
+Questão 16: O servidor do google (8.8.8.8) aceita consultas recursivas?
+
+Sim.
+
+
+
+

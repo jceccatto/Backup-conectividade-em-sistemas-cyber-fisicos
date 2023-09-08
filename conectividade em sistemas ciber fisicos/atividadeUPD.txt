@@ -1,0 +1,17 @@
+PERGUNTA 1: Explique o que acontece quando um sensor é inciado antes do monitor.
+
+o sensor nao se conecta com o monitor quando, ele faz apenas uma tentativa mas como nao existe resposta ele desiste da conexao
+
+PERGUNTA 2: O que faz a chamada s.setblocking(0)? Por que é necessário chamar s.setblocking(1) quando o registro é confirmado?
+
+Altera o comportamento padrao do programa. setblocking em 0 ele aguarde 5 segundos. 
+
+quando setblocking esta em 1 fica esperando uma conexao até ela ser estabelecida, travando a aplicaçao e nao possibilitando outras comunicaçoes, o setblocking 0 faz com que a comunicaçao seja instantanea e caso o monitor nao esteja aberto, voce "perde" a comunicaçao efetuada antes. setblocking 1 é o padrao das aplicaçoes
+
+Pergunta 3: Aguardar um tempo de 5 segundos para receber confirmações é estratégia? O que aconteceria se um tempo muito pequeno ou muito grande for usado.
+
+depende, um tempo muito curto pode ser insuficiente para comunicacao e um tempo muito longo pode "travar" a aplicaçao desnecessariamente.
+
+Pergunta 4: Qual a garantia que a confirmação recebida correponde ao comando enviado? O que poderia ser feito para aumentar essa garantia.
+
+a garantia seria colocar um numero em cada comando para indentificar qual sensor se comunica com o monitor.
